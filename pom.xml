@@ -11,7 +11,7 @@
 	<groupId>com.jellyFish.be</groupId>
 	<artifactId>JellyFish</artifactId>
 	<version>1</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>JellyFish</name>
 	<description>Backend application for Jelly Fish Chat app</description>
 	<url/>
