@@ -1,38 +1,54 @@
 package com.jellyFish.be.JellyFish.User;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class User {
-    private String name;
-    private String email;
 
-    public User() {
-    }
+	@NotBlank(message = "Name is mandatory")
+	private String name;
 
-    public User(String name, String email) {
-        this.name = name;
-        this.email = email;
-    }
+	@NotBlank(message = "Email is mandatory")
+	private String email;
 
-    public String getName() {
-        return name;
-    }
+	@NotBlank(message = "Password is mandatory")
+	private String password;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public User() {
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public User(String name, String email, String password) {
+		this.name = name;
+		this.email = email;
+		this.password = password;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public String getName() {
+		return name;
+	}
 
-    @Override
-    public String toString() {
-        return "Users{" +
-                "name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                '}';
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	@Override
+	public String toString() {
+		return "Users{" + "name='" + name + '\'' + ", email='" + email + '\'' + '}';
+	}
+
 }
